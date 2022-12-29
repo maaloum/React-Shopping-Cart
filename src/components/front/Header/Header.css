@@ -1,0 +1,79 @@
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+  padding: 0 1rem;
+  background-color: rgb(220, 101, 101);
+}
+
+.my-logo{
+
+  width: 120px;
+  height: 100px;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+.left{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 300px;
+  height: 2rem;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 0 10px;
+
+}
+
+.search input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.search button{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.search button:hover{
+  color: rgb(209, 48, 48);
+}
+
+.cart, .signin{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(233, 211, 87);
+  gap: 10px;
+  width: 100px;
+  height: 2rem;
+  border: 1px solid rgb(233, 211, 87);
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+.signin :hover{
+  color: rgb(209, 48, 48);
+}
+.cart :hover{
+  color: rgb(209, 48, 48);
+}
