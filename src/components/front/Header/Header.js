@@ -1,9 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import './Header.css'
 import Logo from './../../../Images/log.png'
 
-export default function Header(productsItems) {
+export default function Header({handleSearch}) {
+
+  const [value, setValue] = useState('')
+
+  const handlInput = (e) =>{
+    setValue(e.target.value)
+
+  }
   return (
     <header>
       <div className="logo">
@@ -12,8 +19,8 @@ export default function Header(productsItems) {
         </Link>
       </div>
       <div className="search">
-        <input type="text" placeholder="Search for items" />
-        <button>Search</button>
+        <input type="text" value={value} onChange={handlInput} placeholder="Search for items" />
+        <button onClick={()=> handleSearch(value)}>Search</button>
       </div>
       <div className='left'>
         <div className="cart">

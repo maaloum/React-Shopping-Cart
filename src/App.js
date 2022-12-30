@@ -7,11 +7,15 @@ import Footer from './components/front/Footer/Footer';
 
 function App() {
   const productsItems = data
+  const handleSearch = (value) =>{
+    const search= productsItems.products.filter(product => JSON.stringify(product.name) === JSON.stringify(value))
+    return <Routes search={search} />
+  }
   return (
     <div className="App">
       <Router>
-        <Header/>
-        <Routes productsItems={productsItems}/>
+        <Header handleSearch={handleSearch}/>
+        <Routes productsItems={productsItems} />
         <Footer/>
       </Router>
     </div>
